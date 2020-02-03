@@ -48,6 +48,14 @@ cargo build --release
 ./target/release/pitufo path/to/json
 ```
 
+## Installation
+
+pitufo can be installed via cargo.
+
+```console
+cargo install pitufo
+```
+
 ## Notes
 
 pitufo will:
