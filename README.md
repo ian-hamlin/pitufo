@@ -54,6 +54,7 @@ pitufo will:
 
 * silently ignore any path that it can not access.
 * report files it can not change to stderr.
+* not provide any feedback on success or progress.
 
 ## License
 

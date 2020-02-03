@@ -49,7 +49,6 @@ name = "pitufo"
 version = "1.0.0"
 dependencies = [
  "argh",
- "serde",
  "serde_json",
  "walkdir",
 ]
