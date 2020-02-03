@@ -6,6 +6,7 @@ edition = "2018"
 license = "MIT OR Apache-2.0"
 description = "A small application that will walk the given path and replace the content of every json file found.  The file will either be prettified or minified."
 repository = "https://github.com/ian-hamlin/pitufo"
+documentation = "https://github.com/ian-hamlin/pitufo"
 homepage = "https://ian-hamlin.github.io/pitufo/"
 keywords = ["json", "prettify", "minify"]
 categories = ["command-line-utilities"]
