@@ -42,7 +42,10 @@ prettify or minify everything you can find *directly* under the path
 Install Rust as per the instructions here https://www.rust-lang.org/tools/install
 
 ```console
+git clone https://github.com/ian-hamlin/pitufo.git
+cd pitufo
 cargo build --release
+./target/release/pitufo path/to/json
 ```
 
 ## Notes
