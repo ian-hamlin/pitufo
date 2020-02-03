@@ -3,6 +3,7 @@ name = "pitufo"
 version = "1.0.0"
 authors = ["ian-hamlin <ian@ihamlin.co.uk>"]
 edition = "2018"
+license = "MIT OR Apache-2.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
