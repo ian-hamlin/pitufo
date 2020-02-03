@@ -10,6 +10,7 @@ documentation = "https://github.com/ian-hamlin/pitufo"
 homepage = "https://ian-hamlin.github.io/pitufo/"
 keywords = ["json", "prettify", "minify"]
 categories = ["command-line-utilities"]
+readme = "README.md"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
