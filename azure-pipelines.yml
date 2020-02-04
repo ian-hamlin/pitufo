@@ -141,7 +141,7 @@ jobs:
       - task: GithubRelease@0
         condition: and(succeeded(), startsWith(variables['Build.SourceBranch'], 'refs/tags/'))
         inputs:
-          gitHubConnection: 'ian-hamlin'
+          gitHubConnection: 'github.com_ian-hamlin'
           repositoryName: 'ian-hamlin/pitufo'
           action: 'edit'
           target: '$(build.sourceVersion)'
