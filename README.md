@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/morpork73/pitufo/_apis/build/status/ian-hamlin.pitufo?branchName=master)](https://dev.azure.com/morpork73/pitufo/_build/latest?definitionId=10&branchName=master)
+
 # pitufo
 
 A small application that will walk the given path and replace the content of every json file found.  The file will either be prettified or minified.
