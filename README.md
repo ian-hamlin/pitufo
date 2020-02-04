@@ -4,6 +4,16 @@
 
 A small application that will walk the given path and replace the content of every json file found.  The file will either be prettified or minified.
 
+## Latest Release
+
+[Latest Release Page][latest-release]
+
+## Downloads
+
+* [x86_64-apple-darwin.zip][mac-release]
+* [x86_64-pc-windows-msvc.zip][windows-release]
+* [x86_64-unknown-linux-musl.zip][linux-release]
+
 ## Usage
 
 ```console
@@ -82,3 +92,8 @@ at your option.
 Unless you explicitly state otherwise, any contribution intentionally submitted
 for inclusion in the work by you, as defined in the Apache-2.0 license, shall be
 dual licensed as above, without any additional terms or conditions.
+
+[latest-release]: https://github.com/ian-hamlin/pitufo/releases/latest
+[mac-release]: https://github.com/ian-hamlin/pitufo/releases/latest/download/x86_64-apple-darwin.zip
+[windows-release]: https://github.com/ian-hamlin/pitufo/releases/latest/download/x86_64-pc-windows-msvc.zip
+[linux-release]: https://github.com/ian-hamlin/pitufo/releases/latest/download/x86_64-unknown-linux-musl.zip
