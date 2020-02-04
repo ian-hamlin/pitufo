@@ -14,6 +14,14 @@ A small application that will walk the given path and replace the content of eve
 * [x86_64-pc-windows-msvc.zip][windows-release]
 * [x86_64-unknown-linux-musl.zip][linux-release]
 
+## Installation
+
+pitufo can be installed via cargo.
+
+```console
+cargo install pitufo
+```
+
 ## Usage
 
 ```console
@@ -58,14 +66,6 @@ git clone https://github.com/ian-hamlin/pitufo.git
 cd pitufo
 cargo build --release
 ./target/release/pitufo path/to/json
-```
-
-## Installation
-
-pitufo can be installed via cargo.
-
-```console
-cargo install pitufo
 ```
 
 ## Notes
