@@ -1,6 +1,6 @@
 [package]
 name = "pitufo"
-version = "1.0.0"
+version = "1.0.1"
 authors = ["ian-hamlin <ian@ihamlin.co.uk>"]
 edition = "2018"
 license = "MIT OR Apache-2.0"
