@@ -47,7 +47,17 @@ fn main() {
 
 fn process_file(entry: &walkdir::DirEntry, minify: bool) -> Result<(), Box<dyn Error>> {
     let content = fs::read(entry.path())?;
-    let json: value::Value = serde_json::from_slice(&content)?;
+
+    // Attempt to fix the bom error
+    let without_bom = if content.starts_with(b"\xEF\xBB\xBF") {
+        &content[3..]
+    } else if (content.starts_with(b"\xFF\xFE")) || (content.starts_with(b"\xFE\xFF")) {
+        &content[2..]
+    } else {
+        &content
+    };
+
+    let json: value::Value = serde_json::from_slice(without_bom)?;
     let output = if minify {
         serde_json::to_vec(&json)?
     } else {
