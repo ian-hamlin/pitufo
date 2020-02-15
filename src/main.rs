@@ -39,8 +39,8 @@ fn main() {
         .filter_map(|e| e.ok())
         .filter(|e| e.path().extension().and_then(OsStr::to_str) == Some("json"))
     {
-        if let Err(_) = process_file(&entry, options.minify) {
-            eprintln!("error {}", entry.path().display());
+        if let Err(e) = process_file(&entry, options.minify) {
+            eprintln!("error {} {}", e, entry.path().display());
         }
     }
 }
