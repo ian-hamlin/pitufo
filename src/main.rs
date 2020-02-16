@@ -14,6 +14,11 @@ pub struct Opts {
     #[argh(switch)]
     minify: bool,
 
+    /// look for leading BOM in json files and remove if found,
+    /// the default is to take the file as-is.
+    #[argh(switch)]
+    bom: bool,
+
     /// set the maximum depth to recurse
     #[argh(option, short = 'm', default = "0")]
     max_depth: usize,
@@ -39,25 +44,31 @@ fn main() {
         .filter_map(|e| e.ok())
         .filter(|e| e.path().extension().and_then(OsStr::to_str) == Some("json"))
     {
-        if let Err(e) = process_file(&entry, options.minify) {
+        if let Err(e) = process_file(&entry, options.minify, options.bom) {
             eprintln!("error {} {}", e, entry.path().display());
         }
     }
 }
 
-fn process_file(entry: &walkdir::DirEntry, minify: bool) -> Result<(), Box<dyn Error>> {
+fn process_file(
+    entry: &walkdir::DirEntry,
+    minify: bool,
+    look_at_bom: bool,
+) -> Result<(), Box<dyn Error>> {
     let content = fs::read(entry.path())?;
 
     // Attempt to fix the bom error
-    let without_bom = if content.starts_with(b"\xEF\xBB\xBF") {
+    let content_bomed = if look_at_bom && content.starts_with(b"\xEF\xBB\xBF") {
         &content[3..]
-    } else if (content.starts_with(b"\xFF\xFE")) || (content.starts_with(b"\xFE\xFF")) {
+    } else if look_at_bom && (content.starts_with(b"\xFF\xFE"))
+        || (content.starts_with(b"\xFE\xFF"))
+    {
         &content[2..]
     } else {
         &content
     };
 
-    let json: value::Value = serde_json::from_slice(without_bom)?;
+    let json: value::Value = serde_json::from_slice(content_bomed)?;
     let output = if minify {
         serde_json::to_vec(&json)?
     } else {
