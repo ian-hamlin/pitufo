@@ -10,6 +10,11 @@ pub struct Opts {
     #[argh(switch, long = "follow")]
     follow_links: bool,
 
+    /// verbose mode, output the path of every file found,
+    /// defaults to silent
+    #[argh(switch)]
+    verbose: bool,
+
     /// minify the json, the default is to prettify.
     #[argh(switch)]
     minify: bool,
@@ -45,6 +50,8 @@ fn main() {
     {
         if let Err(e) = process_file(&entry, options.minify, options.bom) {
             eprintln!("error {} {}", e, entry.path().display());
+        } else if options.verbose {
+            println!("{}", entry.path().display());
         }
     }
 }

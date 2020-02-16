@@ -25,17 +25,18 @@ cargo install pitufo
 ## Usage
 
 ```console
-Usage: pitufo [--follow] [--minify] [--bom] [-m <max-depth>] -p <path>
-
-usage of pitufo
+Usage: pitufo [--follow] [--verbose] [--minify] [--bom] [-m <max-depth>] -p <path>
 
 Options:
   --follow          follow symbolic links, the default is to not follow.
+  --verbose         verbose mode, output the path of every file found, defaults
+                    to silent
   --minify          minify the json, the default is to prettify.
   --bom             look for leading BOM in json files and remove if found, the
                     default is to take the file as-is.
   -m, --max-depth   set the maximum depth to recurse
-  -p, --path        the path to search for json fi
+  -p, --path        the path to search for json files.
+  --help            display usage information
 ```
 
 ## Example
