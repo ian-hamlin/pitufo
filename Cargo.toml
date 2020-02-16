@@ -12,6 +12,9 @@ keywords = ["json", "prettify", "minify"]
 categories = ["command-line-utilities"]
 readme = "README.md"
 
+[badges]
+azure-devops = { project = "morpork73/pitufo", pipeline = "ian-hamlin.pitufo", build = "10" }
+
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]

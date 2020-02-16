@@ -1,4 +1,5 @@
 [![Build Status](https://dev.azure.com/morpork73/pitufo/_apis/build/status/ian-hamlin.pitufo?branchName=master)](https://dev.azure.com/morpork73/pitufo/_build/latest?definitionId=10&branchName=master)
+![crates.io](https://img.shields.io/crates/v/pitufo.svg)
 
 # pitufo
 
