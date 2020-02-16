@@ -1,6 +1,6 @@
 [package]
 name = "pitufo"
-version = "1.0.1"
+version = "2.0.0"
 authors = ["ian-hamlin <ian@ihamlin.co.uk>"]
 edition = "2018"
 license = "MIT OR Apache-2.0"
@@ -21,3 +21,6 @@ argh = "0.1.3"
 [dependencies.serde_json]
 version = "1.0"
 features = ["arbitrary_precision"]
+
+[dev-dependencies]
+pretty_assertions = "0.6.1"
