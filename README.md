@@ -3,7 +3,7 @@
 
 # pitufo
 
-A small application that will walk the given path and replace the content of every json file found.  The file will either be prettified or minified.
+A small application that will walk the given path and replace the content of every json file found.  The file will either be prettified or minified
 
 ## Latest Release
 
